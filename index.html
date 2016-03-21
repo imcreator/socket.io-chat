@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  	<script src="http://code.jquery.com/jquery-1.12.2.min.js"></script>
+  </head>
+
+  <body>
+
+   <div class="container">
+
+      <form id="form" class="form-signin" style="width:50%; margin: 0 auto">
+        <h2 class="form-signin-heading">Podaj login</h2>
+        <input id="inputLogin" class="form-control" placeholder="Wpisz swój login, aby dołączyć do pokoju" required="" autofocus=""><br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Dołącz do czata</button>
+      </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io.connect('http://localhost');
+      $('#form').submit(function(e) {
+        e.preventDefault();
+        var login = $('#inputLogin').val();
+        socket.emit('login', login);
+        sessionStorage.setItem('login', login);
+        window.location.href = "/chatroom";
+      });
+    </script>
+  </body>
+</html>
