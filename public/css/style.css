@@ -1,0 +1,62 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #eeeeee;
+}
+
+#login-box {
+  width: 35%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2% 3%;
+  margin-top: 10%;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+  padding-bottom: 5%;
+}
+
+#chat-logo {
+ background-image: url(//cdn.livechatinc.com/app/production/img/sprites/common-b2f6d71faac2fcb07b431301332bf25c.png);
+ background-position: -855px -18px;
+  width: 120px;
+  height: 66px;
+  vertical-align: middle;
+  display: block;
+  margin: 10% auto;
+
+}
+
+form {
+  width:80%; 
+  margin: 0 auto;
+}
+
+input[type='text'] {
+  height: 46px;
+}
+
+#spinner-wrapper {
+  display: none;
+}
+
+.spin-center {
+  position: absolute;
+  top: 32%;
+  width: 10%;
+  left: 45%;
+}
+
+#logged-phase {
+  display: none;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+
+.blue {
+  color: blue;
+}
